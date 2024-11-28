@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livre Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .book {
+            position: relative;
+            width: 80%;
+            height: 90%;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1500px;
+        }
+
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            transform-origin: left;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.8s ease-in-out;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .page.turning {
+            transform: rotateY(-180deg);
+        }
+
+        .page-content {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .page-content img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .page-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #555;
+            font-family: 'georgia';
+        }
+
+        .cover {
+            background-color: #222;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .cover h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .cover p {
+            font-size: 1.5rem;
+            margin: 0px 0 0;
+        }
+
+        .image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .image-container img {
+            max-width: 25%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .page-content p {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="book">
+        <!-- Page de couverture -->
+        <div class="page cover" id="cover">
+            <div class="page-content">
+                <h1>Portfolio</h1>
+                <p>Par [Votre Nom]</p>
+            </div>
+        </div>
+
+<!-- PAGE DE COUVERTURE  -->
+<div class="page" id="page1" style="z-index: 24;">
+    <div class="page-content">
+        <img src="IMG_7612.jpeg" alt="Image de fond" 
+             style="position: relative; max-width: 110%; top: 0px; bottom: 0px; left: -20px; object-fit: cover; opacity: 80%;" />
+
+
+   <!-- Ligne sous l'écriture -->
+        <hr style="position: absolute; bottom: 120; left: 100px; transform: translateX(-50%);
+                    width: 250px; height: 2px; background-color: black; border: none;" />
+
+        <div style="position: absolute; bottom: 370px; left: 140px; transform: translateX(-50%); 
+                    font-size: 2.3rem; color: black; font-family: 'Bodoni 72'; letter-spacing: 0.1em;">
+            Eva KILLY
+        </div>
+
+     
+    </div>
+</div>
+
+<!-- PAGE 1- NOTE D'INTENTION -->
+<div class="page" id="page2" style="z-index: 23;">
+    <div class="page-content">
+
+      <div style="position: absolute; bottom: 90px; right: 30px; left: 400px;  
+                    font-size: 1.1rem; color: black; font-family: 'Bodoni 72'; letter-spacing: 0.1em; text-align: justify;">
+  
+Je suis quelqu’un qui observe, qui s’interroge. Faire de l’art est devenu pour moi un moyen de comprendre le monde, un chemin pour prendre le temps d’explorer ce qui, souvent, passe inaperçu. Très tôt, j’ai été fascinée par les livres, non seulement pour ce qu’ils racontent, mais aussi pour ce qu’ils sont : des objets que l’on manipule, que l’on parcourt, que l’on traverse à son propre rythme.
+<br/>
+Au fil du temps, l’édition est devenue centrale dans ma pratique. Elle m’offre un cadre, une structure, mais aussi une liberté infinie pour jouer avec les pages, les rythmes, les matières. Cette liberté m’a naturellement menée à une question qui, je crois, vous touche aussi : celle du temps. Invisible, insaisissable, il est pourtant partout. Le livre, avec sa manière d’imposer un rythme, d’accumuler ou d’effacer, est devenu pour moi un moyen de le matérialiser.
+<br/>
+Mon travail cherche à rendre ce temps perceptible autrement, à travers des gestes simples mais répétitifs, des accumulations ou des effacements. C’est ma manière de me relier à lui, de le questionner, et peut-être de mieux l’habiter. Vous en avez sans doute déjà fait l’expérience, en vous perdant dans un moment où le temps semblait suspendu, ou en vous retrouvant à la croisée de plusieurs instants simultanés
+</div>
+    
+
+            <div class="page-number">01</div>
+    </div>
+</div>
+
+
+
+
+<!-- PAGE 2- TATOO ART -->
+<div class="page" id="page3" style="z-index: 22;">
+    <div class="page-content">
+        <img src="TatooArt.jpg" alt="Image de fond" 
+             style="position: relative; max-width: 60%; margin-top: 15px; margin-bottom: 10px; left: -130px; object-fit: cover;" />
+
+        <!-- Légende -->
+        <div style="position: absolute; bottom: 20px; left: 76%; transform: translateX(-50%);
+                    padding: 10px 15px; border-radius: 8px; 
+                  font-family: Arial, sans-serif;  text-align: left;">
+            <p style="margin: 0; font-size: 1.2rem; font-weight: bold;">Tatoo Art,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">Livre découpé, collage,</p>
+            <p style="margin: 2px 0; font-size: 1rem;"> 30 x 40 x 5 cm,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">2024</p>
+        </div>
+        <div class="page-number">02</div>
+    </div>
+</div>
+
+
+            
+
+
+<!-- page3 TATOO ART -->
+<div class="page" id="page4" style="z-index: 21;">
+    <div class="page-content">
+        <img src="TatooArt3.jpg" alt="Image de fond" 
+             style="position: absolute; max-width: 45%; top: 0px; ; left: 50px; object-fit: cover;" />
+   <img src="TatooArt2.jpg" alt="Image de fond" 
+             style="position: absolute; max-width: 45%; top: 0px ; right: 50px; object-fit: cover;" />
+      
+      <div style="position: absolute; bottom: 70px; right: 20px; left: 20px;  
+                    font-size: 1.2rem; color: black; font-family: 'Bodoni 72'; letter-spacing: 0.1em;">
+      TATOO ART questionne la relation entre le corps et le décor, où le livre, transformé en sculpture, devient une peau. Chaque incision, chaque trait, inscrit une mémoire sur un espace vivant. Le dessin, comme un tatouage, se fait marque, imprimant dans la matière l’éphémère et le permanent.
+</div>
+
+ <div class="page-number">03</div>
+    </div>
+</div>
+
+
+<!-- SPIRALE -->
+<div class="page" id="page5" style="z-index: 20;">
+    <div class="page-content">
+        <img src="IMG_9646.JPG" alt="Image de fond" 
+             style="position: absolute; max-width: 40%; top: -20px; left: 0px; object-fit: cover;" />
+
+        <!-- Légende -->
+        <div style="position: absolute; bottom: 20px; left: 49%; transform: translateX(-50%);
+                    padding: 10px 15px; border-radius: 8px; 
+                    font-family: Arial, sans-serif; text-align: left;">
+            <p style="margin: 0; font-size: 1.2rem; font-weight: bold;">Sans titre,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">Livre découpé, collage,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">30 x 40 x 5 cm,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">2024</p>
+        </div>
+
+        <!-- Bloc texte -->
+        <div class="text-block" style="position: absolute; top: 250px; left: 620px; right: 50px;  
+                    font-size: 1rem; color: black; font-family: 'Bodoni 72'; letter-spacing: 0.1em;
+                    text-align: justify;">
+            L'œuvre, sans titre, se présente comme un parcours visuel et symbolique de la vie. 
+            Chaque marche représente une étape de l'existence : l'enfance, l'adolescence, l'adulte, 
+            jusqu'à la prise de hauteur symbolisée par une spirale centrale. 
+            Cette spirale incarne le cheminement intime et personnel, l'ascension vers une compréhension plus 
+            profonde de soi et du monde. L'œuvre explore le temps non seulement comme un mouvement linéaire, 
+            mais aussi comme une série de moments interconnectés, chacun influençant et enrichissant le suivant.
+        </div>
+ <div class="page-number">04</div>
+    </div>
+</div>
+
+
+
+<!-- SPIRALE IMAGE EN GRAND -->
+
+<div class="page" id="page6" style="z-index: 19;">
+    <div class="page-content">
+        <img src="IMG_9667.png" alt="Image de fond" 
+             style="position: absolute; max-width: 70%; top: -380px; ; right: 268px; object-fit: cover; rotate: 90deg;" />
+
+      
+ <!-- Légende -->
+        <div style="position: absolute; top: 200px; right: -60px; transform: translateX(-50%); color: white;
+                     border-radius: 8px; 
+                    font-family: Arial, sans-serif; text-align: right ;">
+            <p style="margin: 0; font-size: 1.2rem; font-weight: bold;">Sans titre,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">Livre découpé, collage,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">30 x 40 x 5 cm,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">2024</p>
+        </div>
+ <div class="page-number">05</div>
+    </div>
+</div>
+
+
+<!-- LABYRINTHE -->
+
+<div class="page" id="page7" style="z-index: 18;">
+    <div class="page-content">
+        <img src="IMG_1201.JPG" alt="Image de fond" 
+             style="position: absolute; max-width: 59%; bottom: -190px; ; left: 0%; object-fit: cover; " />
+
+      
+ <!-- Légende -->
+        <div style="position: absolute; top: 20px; right: 200px; transform: translateX(-50%); color: black;
+                     border-radius: 8px; 
+                    font-family: Arial, sans-serif; text-align: left ;">
+            <p style="margin: 0; font-size: 1.2rem; font-weight: bold;">Sans titre,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">Livre découpé, collage,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">30 x 40 x 5 cm,</p>
+            <p style="margin: 2px 0; font-size: 1rem;">2024</p>
+        </div>
+ <div class="page-number">06</div>
+    </div>
+</div>
+
+
+<!-- Langue Plastique -->
+
+<div class="page" id="page8" style="z-index: 17;">
+    <div class="page-content">
+        <img src="IMG_7588.jpeg" alt="Image de fond" 
+             style="position: absolute; max-width: 55%; top: -15%; ; left: 0%; object-fit: cover; rotate: 0deg;" />
+
+      
+ <!-- Légende -->
+        <div style="position: absolute; top: 20px; left: 720px; transform: translateX(-50%); color: black;
+                     border-radius: 8px; 
+                    font-family: Arial, sans-serif; text-align: left ;">
+            <p style="margin: 0; font-size: 1rem; font-weight: bold;">Langue plastique,</p>
+            <p style="margin: 2px 0; font-size: 0.8rem;">écriture collective</p>
+            <p style="margin: 2px 0; font-size: 0.8rem;">30 x 20 x 0.3 cm,</p>
+            <p style="margin: 2px 0; font-size: 0.8rem;">2022</p>
+        </div>
+
+      <div style="position: absolute; bottom: 90px; right: 30px; left: 750px;  
+                    font-size: 1rem; color: black; font-family: 'Bodoni 72'; letter-spacing: 0.1em; text-align: justify;">
+  
+L'ÉTÉ : Lire, Écrire, Traduire, Éditer
+<br/><br/>
+Le workshop "L'ÉTÉ", d'une durée de cinq jours, a permis d'explorer la langue à travers un travail collectif de collage textuel. Au cours de ces journées, les participants ont feuilleté divers livres, piochant des extraits pour assembler un poème sur quatre pages, en jouant avec la typographie, les espaces et la mise en page. L'objectif était de déconstruire le texte, de jouer avec les formes et de transformer chaque fragment en une nouvelle création.
+<br/>
+À la fin des cinq jours, nous avons rendu un livre collectif, une œuvre où chaque page reflétait la manipulation du texte et la réinvention de la langue. Le workshop s'est conclu par une lecture orale des créations, offrant l'opportunité de redonner vie aux mots en jouant avec les rythmes, les sons et les silences. "L'ÉTÉ"" a ainsi été une expérience immersive, où l'écriture s'est transformée en un espace vivant et mouvant, à la fois visuel et sonore.
+</div>
+ <div class="page-number">07</div>
+
+    </div>
+</div>
+
+<!-- PAGE 9 SPIRALE2 -->
+
+<div class="page" id="page9" style="z-index: 16;">
+    <div class="page-content" style="display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100vh;">
+        <img src="IMG_7593.jpeg" alt="Image de fond" 
+             style="max-width: 20%; object-fit: cover;" />
+        <img src="IMG_7594.jpeg" alt="Image de fond" 
+             style="max-width: 17%; object-fit: cover;" />
+        <img src="IMG_7595.jpeg" alt="Image de fond" 
+             style="max-width: 20%; object-fit: cover;" />
+        <img src="IMG_7596.jpeg" alt="Image de fond" 
+             style="max-width: 20%; object-fit: cover;" />
+    </div>
+     <div class="page-number">08</div>
+</div>
+
+
+
+ <!-- Page 9 CHIMERE1 -->
+        <div class="page" id="page10" style="z-index: 15;">
+ <div class="page-content">
+  <p style="font-size: 3rem; margin-top: -10px; position: relative; font-family: 'Bodoni 72'; letter-spacing: 0.5em;">Le corps chimérique</p>
+
+
+<!-- Ligne horizontale -->
+<div style="margin-top: 0px; width: 90%; height: 1px; background-color: black;"></div>
+
+    <p style="font-size: 1.1rem; margin-top: 40px; font-family: 'Times New roman' ; line-height: 1.6; text-align: justify; margin-left: 20px; margin-right: 20px;">
+        Dans le cadre du pôle Le Corps dans tous ses états, cette performance, créée après un workshop de deux jours sur le thème des corps chimériques, interroge la relation entre contrainte, dépendance et individualité. Nous avons choisi de lier nos deux corps par la taille, attachés par une corde, symbolisant une fusion imposée dès la naissance. Nos corps, entièrement recouverts de costumes sombres des pieds à la tête, perdent leur humanité pour devenir des formes anonymes et hybrides.
+
+        Dans une atmosphère sombre et pesante, nous déambulons, nos mouvements entravés par cette corde. Ce lien, d'abord nécessaire à notre équilibre, devient progressivement une prison. La tension monte : le désir d'indépendance éclate. Mais lorsque les corps se libèrent, l'équilibre se brise. Isolés, incapables de survivre sans l'autre, les deux corps s'effondrent, incapables d'exister en autonomie.
+
+        Cette performance met en lumière notre nature chimérique : des êtres à la fois fusionnels et tiraillés par un besoin d'indépendance, condamnés à chercher un équilibre entre lien et solitude, entre unité et fragmentation.
+    </p>
+
+    <!-- Images alignées horizontalement -->
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-right: 20px; margin-left: 20px;">
+        <img src="Capture d’écran 2024-11-17 à 17.04.16.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.05.10.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.05.58.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.06.24.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.06.47.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.07.14.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.07.24.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.07.55.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.08.03.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.08.20.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.08.40.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="Capture d’écran 2024-11-17 à 17.08.59.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+    </div>
+ <div class="page-number">09</div>
+</div>
+
+          
+        </div>
+
+
+ <!-- Page 10 CHIMERE 2 -->
+        <div class="page" id="page11" style="z-index: 14;">
+ <div class="page-content">
+     <p style="font-size: 3rem; margin-top: -10px; position: relative; font-family: 'Bodoni 72'; letter-spacing: 0.5em;">Le corps chimérique part2</p>
+
+
+<!-- Ligne horizontale -->
+<div style="margin-top: 0px; width: 90%; height: 1px; background-color: black;"></div>
+
+    <p style="font-size: 1.1rem; margin-top: 50px; font-family: 'Times New roman' ; line-height: 1.6; text-align: justify;">
+       Dans cette performance, deux corps sont liés par les avant-bras et masqués, créant un déséquilibre apparent. Dès le début, les mouvements sont hésitants et forcés, comme si la contrainte les poussait à s’adapter à une situation nouvelle. Au fur et à mesure, les corps apprennent à se synchroniser, cherchant à trouver un équilibre dans cette restriction.
+
+L’espace sombre, d’abord oppressant, devient progressivement plus accueillant à mesure que les corps se déplacent ensemble. Finalement, la lumière se fait, symbolisant l’atteinte de l’équilibre et de la réussite dans cette épreuve, marquée par la fluidité des mouvements et l’harmonie retrouvée. Le lien, au lieu de rester une contrainte, devient un élément de libération.
+    </p>
+
+    <!-- Images alignées horizontalement -->
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <img src="IMG_8289.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8291.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8294.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8298.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8301.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8305.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8307.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8313.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8321.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8324.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8326.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+        <img src="IMG_8327.jpg" alt="Image illustrative" style="max-width: 16%; height: auto;" />
+    </div>
+
+</div>
+
+            <div class="page-number">10</div>
+        </div>
+
+
+
+ <!-- Page 11 PROJET PAS 1 191 689 -->
+        <div class="page" id="page12" style="z-index: 13;">
+ <div class="page-content">
+
+    <!-- Vidéo -->
+<video controls autoplay style="max-width: 33%; height: auto; top: 310px; margin-left: -650px; position: relative; ">
+    <source src="5_P1.mp4" type="video/mp4">
+   
+</video>
+
+    <p style="font-size: 3rem; top: -340px; position: relative; font-family: 'Bodoni 72'; letter-spacing: 0.5em;">1 191 689</p>
+
+
+    <p style="font-size: 1rem; margin-left: 470px; margin-right: 100px; top: -290px; position: relative; font-family: 'Bodoni 72'; letter-spacing: 0.2em; text-align: justify;">
+1 191 689 est une œuvre qui traduit une année complète de pas en une cartographie visuelle. Le titre correspond au nombre total de pas effectués durant l'année et chaque élément graphique reflète une partie de ce total. La structure est horizontale, chaque ligne représente une journée et les cercles se succèdent de gauche à droite, de minuit à 23h59. Le diamètre de chaque cercle est proportionnel au nombre de pas effectués pendant l’heure, traduisant l’intensité de l’activité par des variations de taille.
+<br/>
+Chaque cercle a été dessiné un par un grâce à un codage minutieux, dans un processus répétitif. Une fois les journées complétées, un calque rassemble et superpose tous ces cercles dans une édition. Ce choix visuel mettant en lumière l’accumulation et la transparence. Cette superposition crée une image à la fois dense et légère, évoquant la fragilité du temps et des traces qu’il laisse.
+<br/>
+À travers cette œuvre, le quotidien, souvent invisible, devient une représentation tangible et poétique. Ce projet interroge le passage du temps, la mémoire des gestes et la matérialité de nos mouvements, tout en explorant l’impact de la répétition et de l’accumulation sur notre perception.
+    </p>
+ <div class="page-number">11</div>
+</div>
+</div>
+
+
+
+<!-- PAGE 12 IMG CODE CERCLES -->
+
+        <div class="page" id="page13" style="z-index: 12;">
+ <div class="page-content">
+
+  <img src="Capture d’écran 2023-12-17 à 18.33.31.jpeg" alt="Image de fond" style="max-width: 55%; margin-right: 480px; object-fit: cover;" /> 
+  
+ <div class="page-number">12</div>
+
+    </div>
+</div>
+
+
+
+
+<!-- PAGE 13 WS CREATION D'UNE TIPO -->
+        <div class="page" id="page14" style="z-index: 11;">
+ <div class="page-content">
+ <img src="IMG_0942 2.jpeg" alt="Image de fond"
+             style="position: absolute; max-width: 60%; top: -90px; ; left: 200px; object-fit: cover; " />
+ <!-- Légende -->
+        <div style="position: absolute; bottom: 20px; right: -70px; transform: translateX(-50%); color: black;
+                     border-radius: 4px; 
+                    font-family: Arial, sans-serif; text-align: right ;">
+            <p style="margin: 0; font-size: 0.8rem; font-weight: bold;">WS création d'une tipographie</p>
+            <p style="margin: 2px 0; font-size: 0.7rem;">Affiche collective, 120x80cm <br/>  2024</p>
+           
+        </div>
+ <div class="page-number">13</div>
+
+    </div>
+</div>
+
+
+
+
+<!-- PAGE 14 MEMOIRES EN SUSPENSION -->
+        <div class="page" id="page15" style="z-index: 10;">
+ <div class="page-content">
+ <img src="IMG_1686 2.jpeg" alt="Image de fond"
+             style="position: absolute; max-width: 52%; top: 0%; ; left: 0%; object-fit: cover; " />
+<img src="IMG_1687 2.jpeg" alt="Image de fond"
+             style="position: absolute; max-width: 48%; top: 0px; ; right: 0%; object-fit: cover; " />
+
+    <p style="font-size: 0.8rem; margin-left: 20px; margin-right: 300px; bottom: -280px; position: relative; font-family: 'Bodoni 72'; letter-spacing: 0.2em; ">
+        Le projet "Mémoire en Suspension" examine le rapport au temps à travers les témoignages des habitants du quartier d'Encageante à Aix, dont les souvenirs sont liés à la démolition imminente de leur immeuble. Chaque boîte, représentant une discussion avec un habitant, contient des papiers recyclés symbolisant la fragilité de la mémoire et de l'instant. Ce travail aborde le temps à la fois comme un élément destructeur et un témoin, soulignant comment les événements marquants façonnent notre perception du passé et de l'avenir, tout en mettant en lumière la temporalité fragile des récits humains.
+    </p>
+    
+     <!-- Légende -->
+        <div style="position: absolute; bottom: 105px; right: -80px; transform: translateX(-50%); color: black;
+                     border-radius: 3px; 
+                    font-family: Arial, sans-serif; text-align: right ;">
+            <p style="margin: 0; font-size: 1rem; font-weight: bold;">Mémoires en Suspension</p>
+            <p style="margin: 2px 0; font-size: 0.8rem;">papier recyclé, coutures</p>
+            <p style="margin: 2px 0; font-size: 0.8rem;">dimensions variables</p>
+            <p style="margin: 2px 0; font-size: 0.8rem;">2024</p>
+        </div>
+
+        <div style="position: absolute; top: 5px; margin-right: 10px;margin-left: 550px; transform: translateX(-50%); color: black;
+                     border-radius: 1px; opacity: 80%; text-align: justify;
+                    font-family: Arial, sans-serif; font-style: italic; ">
+            <p style="margin: 0; font-size: 0.6rem;">Exposition dans le cadre du pôle "l'appartement" à Encagnane, Aix-en-provence</p>
+    </p>
+</div>
+ <div class="page-number">14</div>
+
+    </div>
+</div>
+
+
+<!-- PAGE15 - LE POIDS DES HEURES -->
+        <div class="page" id="page16" style="z-index: 9;">
+ <div class="page-content">
+
+    <!-- Image de fond -->
+    <img src="IMG_7612.jpeg" alt="Image de fond" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; margin-top: 0;" />
+<!--   <p style="font-size: 2rem; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); font-family: 'Bodoni 72'; letter-spacing: 0.5em; margin: 0; padding: 10px; background-color: rgba(0, 0, 0, 0.5); color: white;">
+  Le poids des heures
+</p> -->
+
+ <!-- Légende -->
+        <div style="position: absolute; bottom: 100px; left: 170px; transform: translateX(-50%); color: black;
+                     border-radius: 100px; 
+                    font-family: georgia, sans-serif; text-align: left ;">
+            <p style="margin: 0; font-size: 1.8rem; font-weight: bold; line-height: 1.5">Le poids des heures</p>
+            <p style="margin: 2px 0; font-size: 1.7rem;">Edition, 10x20x200cm, <br/>  2024</p>
+           
+        </div>
+
+ <div class="page-number">15</div>
+
+    </div>
+</div>
+
+
+
+<!-- PAGE17 -->
+        <div class="page" id="page17" style="z-index: 8;">
+ <div class="page-content">
+
+   <p style="font-family: 'Georgia', serif; font-size: 1.1rem; font-weight: normal; margin-top: -300px; margin-left: 40px; margin-right: 120px; text-align: justify;">
+Le poids des heures est un livre de 6240 pages, où chaque page représente une heure, donc 260 jours complets du début de l'année scolaire jusqu'au diplôme  <br/> Pour ce livre, j'ai utilisé du papier de magazines publicitaires que j'avais à la maison, afin de symboliser les distractions incessantes et les flux d'informations, de publicités et de stimuli que nous subissons quotidiennement. Ce projet met en lumière l'encombrement constant de l'environnement, une forme de bruit visuel et mental. Ce bruit se superpose à notre perception du temps. C’est une réflexion sur comment ces parasites façonnent et perturbent notre quotidien.
+
+</p>
+
+    <!-- Espace réservé pour l'image -->
+
+ <img src="IMG_7641.jpeg" alt="Image de fond" style="position: absolute; top: 250px; left: 0px; right: 0px; margin-bottom: 200px; max-width: 120%; object-fit: cover; margin-top: 0;" />
+
+ <div class="page-number">16</div>
+    </div>
+</div>
+
+
+<!-- PAGE18 -->
+        <div class="page" id="page18" style="z-index: 7;">
+ <div class="page-content">
+
+
+
+ <div class="page-number">17</div>
+    </div>
+</div>
+
+
+
+        <!-- Génération dynamique des pages -->
+        <script>
+            for (let i = 25; i <= 25; i++) {
+                document.write(`
+                    <div class="page" id="page${i}" style="z-index: ${25 - i};">
+                        <div class="page-content">
+                            <h2>Page ${i}</h2>
+                            <p>Contenu personnalisé pour la page ${i}.</p>
+                            <img src="https://via.placeholder.com/300x200" alt="Exemple ${i}">
+                        </div>
+                        <div class="page-number">${i}</div>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+
+    <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+
+        function turnPage(direction) {
+            if (direction === 'next' && currentPage < pages.length - 1) {
+                pages[currentPage].classList.add('turning');
+                currentPage++;
+            } else if (direction === 'prev' && currentPage > 0) {
+                currentPage--;
+                pages[currentPage].classList.remove('turning');
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                turnPage('next');
+            } else if (e.key === 'ArrowLeft') {
+                turnPage('prev');
+            }
+        });
+    </script>
+</body>
+</html>
+
